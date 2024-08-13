@@ -1,0 +1,16 @@
+<div class="wrapper content-center">
+  <h1 class="px-2 py-2 text-center font-extrabold">{{ title | uppercase }}</h1>
+  <div class="w-screen px-5 py-5 flex flex-row content-center">
+    <div class="flex flex-row w-screen justify-center">
+      <div class="planned px-5 py-5 w-3/12">
+        <app-planned></app-planned>
+      </div>
+      <div class="in-progress px-5 py-5 w-3/12">
+        <app-inprogress></app-inprogress>
+      </div>
+      <div class="finished px-5 py-5 w-3/12">
+        <app-finished></app-finished>
+      </div>
+    </div>
+  </div>
+</div>

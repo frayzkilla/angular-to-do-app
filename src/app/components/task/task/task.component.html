@@ -1,0 +1,24 @@
+
+
+<div class="wrapper w-200 px-5 py-5 bg-slate-100 flex flex-col rounded-2xl m-1">
+    <p class="text-center font-normal">{{ task.title | titlecase}}</p>
+    <div class="flex flex-row px-3 py-3">
+        <button 
+            class="p-3 w-6/12"
+            (click)="prevStage()"
+            *ngIf="!first"
+        >
+        <i class="fa-solid fa-arrow-left"></i></button>
+        <button 
+            class="p-3 w-6/12"
+            (click)="prevStage()"
+            *ngIf="first"
+        >
+        &nbsp;</button>
+        <button 
+            class="p-3 w-6/12"
+            (click)="nextStage()"
+            *ngIf="!last"
+        ><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+</div>

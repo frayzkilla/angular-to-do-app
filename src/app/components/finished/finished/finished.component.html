@@ -1,0 +1,10 @@
+<div class="container px-5 py-5 flex flex-col">
+    <h1 class="font-bold text-center px-2 py-2">FINISHED</h1>
+    <div class="task-cont">
+        <ul>
+            <li *ngFor="let task of taskslist">
+                <app-task *ngIf="task.status === 3" [task]="task"  [first]="false" [last]="true"></app-task>
+            </li>
+        </ul>
+    </div>
+</div>

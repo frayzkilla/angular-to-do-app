@@ -1,0 +1,38 @@
+<div class="container px-5 py-5 flex flex-col">
+    <h1 class="font-bold text-center px-2 py-2">PLANNED</h1>
+    <div class="task-cont">
+        <ul>
+            <li *ngFor="let task of taskslist">
+                <app-task *ngIf="task.status === 1" [task]="task" [first]="true" [last]="false"></app-task>
+            </li>
+            <li>
+                <div *ngIf="adding" class="wrapper w-200 px-5 py-5 bg-green-100 flex flex-col rounded-2xl m-1 mt-5">
+                    <input class="w-full p-2 rounded" type="text" placeholder="your task..." [(ngModel)]="inputValue">
+                    <div class="flex flex-row px-3 py-3 text-lg">
+                        <button 
+                            class="p-3  w-6/12"
+                            (click)="noAddTask()"
+                        >
+                        <i class="fa-solid fa-xmark"></i></button>
+                        <button 
+                            class="p-3  w-6/12"
+                            (click) = "addTask()"
+                        >
+                        <i class="fa-solid fa-check"></i></button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div *ngIf="!adding" class="wrapper w-24 h-24 bg-green-100 rounded-full content-center mt-5">
+                    <div class="flex flex-row px-3 py-3 rounded content-center w-full">
+                        <button 
+                            class="w-full text-lg"
+                            (click)="adding = !adding"
+                        >
+                        <i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
